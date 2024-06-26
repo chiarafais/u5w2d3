@@ -22,7 +22,7 @@ public class AutoriController {
 
     @GetMapping
     public Page<Autore> getAllUsers(@RequestParam(defaultValue = "0") int page,
-                                    @RequestParam(defaultValue = "2") int size,
+                                    @RequestParam(defaultValue = "10") int size,
                                     @RequestParam(defaultValue = "id") String sortBy) {
         return this.autoriService.getAutori(page, size, sortBy);
     }
